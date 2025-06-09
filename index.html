@@ -1,399 +1,933 @@
-<!DOCTYPE html> <!-- Declares the document type as HTML5 -->
-<html lang="en"> <!-- Root element, sets language to English -->
-    <head>
-        <meta charset="UTF-8" /> <!-- Sets character encoding to UTF-8 -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsive design for mobile -->
-        <title>Tourism Agency</title> <!-- Sets the page title in browser tab -->
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" /> <!-- Favicon icon -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tourism Agency</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- CSS Files -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/icons/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/meanmenu.css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/niceselect.css" />
+    <link rel="stylesheet" href="assets/css/YouTubePopUp.css" />
+    <link rel="stylesheet" href="assets/css/scroll-up.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+  <body>
+    <!-- Start Preloader -->
+    <div class="preloader_wrap">
+      <div class="preloaderstyle_wrap">
+        <span class="preloaderStyle"></span>
+      </div>
+      <div class="preloader_logo">
+        <img src="assets/img/preloader.svg" alt="" />
+      </div>
+    </div>
+    <!-- End Preloader -->
 
-        <!-- Google Fonts and CSS files for styling and icons -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- Preconnect for faster font loading -->
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> <!-- Preconnect for font static files -->
-        <link
-            href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
-            rel="stylesheet"
-        /> <!-- Loads Google Fonts -->
-        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" /> <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="assets/css/bootstrap-datepicker.css" /> <!-- Datepicker CSS -->
-        <link rel="stylesheet" href="assets/css/jquery-ui.css" /> <!-- jQuery UI CSS -->
-        <link rel="stylesheet" href="assets/css/animate.css" /> <!-- Animation CSS -->
-        <link rel="stylesheet" href="assets/icons/fontawesome/css/all.min.css" /> <!-- FontAwesome icons -->
-        <link rel="stylesheet" href="assets/css/meanmenu.css" /> <!-- MeanMenu for mobile nav -->
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css" /> <!-- Owl Carousel CSS -->
-        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" /> <!-- Owl Carousel theme -->
-        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" /> <!-- Swiper slider CSS -->
-        <link rel="stylesheet" href="assets/css/niceselect.css" /> <!-- NiceSelect CSS -->
-        <link rel="stylesheet" href="assets/css/YouTubePopUp.css" /> <!-- YouTube popup CSS -->
-        <link rel="stylesheet" href="assets/css/scroll-up.css" /> <!-- Scroll up button CSS -->
-        <link rel="stylesheet" href="assets/css/style.css" /> <!-- Main custom styles -->
-        <link rel="stylesheet" href="assets/css/responsive.css" /> <!-- Responsive styles -->
-    </head>
-    <body>
-        <!-- Preloader: shows a loading animation before the page loads -->
-        <div class="preloader_wrap" onload="preloader()">
-            <div class="preloaderstyle_wrap">
-                <span class="preloaderStyle"></span> <!-- Animated loading bar/circle -->
+    <!-- Offcanvas Area Start -->
+    <div class="fix-area">
+      <div class="offcanvas__info">
+        <div class="offcanvas__wrapper">
+          <div class="offcanvas__content">
+            <div
+              class="offcanvas__top d-flex justify-content-between align-items-center"
+            >
+              <div class="offcanvas__logo">
+                <a href="index.html">
+                  <img src="assets/img/logo.svg" alt="edutec" />
+                </a>
+              </div>
+              <div class="offcanvas__close">
+                <button type="button" title="Close menu">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
             </div>
-            <div class="preloader_logo">
-                <img src="assets/img/preloader.svg" alt="" /> <!-- Preloader logo image -->
+            <div class="mobile-menu fix mb-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="offcanvas__overlay"></div>
+    <!-- Start Header -->
+
+    <!-- Start Header Top -->
+    <header class="header_top">
+      <div class="container-xxl container-fluid">
+        <div class="row">
+          <div
+            class="col-md-6 col-12 mb-md-0 mb-sm-2 text-center text-md-start"
+          >
+            <span class="align-self-center"
+              ><i class="ph ph-map-pin"></i> 68 Road Taxax, USA</span
+            >
+            <div class="hline align-self-center"></div>
+            <span class="align-self-center tnumber"
+              ><a href="tel:+85654987"
+                ><i class="ph ph-phone"></i> (+85) - 654 987</a
+              ></span
+            >
+          </div>
+
+          <div class="col-md-6 col-12 text-center text-md-end">
+            <span class="align-self-center"
+              ><a href="#"
+                ><i class="ph ph-user-circle"></i> Sign in or Register</a
+              ></span
+            >
+            <div class="hline align-self-center"></div>
+            <ul class="align-self-center">
+              <li>
+                <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+              </li>
+              <li>
+                <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End Header Top -->
+
+    <!-- Start Header -->
+    <header id="tr_header">
+      <div class="container-xxl container-fluid">
+        <div class="row">
+          <div
+            class="col-xl-7 col-md-3 col-12 gap-3 d-lg-flex d-block text-md-start text-center align-self-center"
+          >
+            <div class="site_logo d-inline-block">
+              <a href="index.html"
+                ><img src="assets/img/logo.svg" alt="Tourin"
+              /></a>
             </div>
+
+            <nav class="main-menu align-self-center">
+              <ul>
+                <li>
+                  <a href="index.html"
+                    >Home <i class="fa-solid fa-chevron-down"></i
+                  ></a>
+                  <ul class="sub-menu">
+                    <li><a href="index.html">Home 1</a></li>
+                    <li><a href="index2.html">Home 2</a></li>
+                  </ul>
+                </li>
+                <li><a href="destination.html">Destination</a></li>
+                <li>
+                  <a href="tour.html"
+                    >Tour <i class="fa-solid fa-chevron-down"></i
+                  ></a>
+                  <ul class="sub-menu">
+                    <li><a href="tour-list.html">Tour with Sidebar</a></li>
+                    <li><a href="tour-grid.html">Tour Grids</a></li>
+                    <li><a href="tour-details.html">Tour Details</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Blog <i class="fa-solid fa-chevron-down"></i></a>
+                  <ul class="sub-menu">
+                    <li><a href="blog-grids.html">Blog Grids</a></li>
+                    <li><a href="blog.html">Blog Standard</a></li>
+                    <li><a href="blog-details.html">Blog Details</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#">Pages <i class="fa-solid fa-chevron-down"></i></a>
+                  <ul class="sub-menu">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog List</a></li>
+                    <li><a href="blog-details.html">Blog Details</a></li>
+                    <li><a href="tour.html">Tour</a></li>
+                    <li><a href="tour-details.html">Tour Details</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="404.html">404</a></li>
+                  </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <!-- End Col -->
+
+          <div class="col-xl-5 col-md-9 col-12">
+            <div
+              class="header_right d-flex justify-content-lg-end justify-content-center"
+            >
+              <div class="call_us d-flex gap-3 align-self-center">
+                <i class="ph ph-headset align-self-center"></i>
+                <div class="call_content align-self-center">
+                  <span>Call Anytime</span>
+                  <a href="tel:+8801546857487">(86) - 1546 857</a>
+                </div>
+              </div>
+
+              <div class="cart_search d-flex align-self-center">
+                <span class="hcart"
+                  ><a href="cart.html" title="View Cart"
+                    ><i class="ph ph-shopping-cart-simple"></i></a
+                  ><span>3</span></span
+                >
+                <span class="hsearch"
+                  ><a href="#" title="Search"><i class="ph ph-magnifying-glass"></i></a
+                ></span>
+              </div>
+
+              <a href="#" class="yellow_btn d-none d-md-block align-self-center"
+                ><span>Booking Now</span></a
+              >
+
+              <div class="header__hamburger d-xl-none my-auto">
+                <div class="sidebar__toggle">
+                  <i class="ph ph-list"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Col -->
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+    <!-- Start Slider -->
+    <section class="tr_slider_wrap text-center wow fadeInUp">
+      <div class="tr_slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div
+              class="slider_item"
+              style="background-image: url(assets/img/slider/1.jpg)"
+            >
+              <div class="container">
+                <span class="subheading active_animation"
+                  >Best Choice for Family</span
+                >
+                <h1 class="heading active_animation">
+                  Discover Your Next <br />
+                  Adventure Today !
+                </h1>
+                <p class="active_animation">
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the <br />
+                  majority have suffered alteration in some form
+                </p>
+                <a href="#" class="yellow_btn active_animation"
+                  ><span>Explore More <i class="ph ph-arrow-right"></i></span
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!-- End swiper-slide -->
+
+          <div class="swiper-slide">
+            <div
+              class="slider_item"
+              style="background-image: url(assets/img/slider/2.jpg)"
+            >
+              <div class="container">
+                <span class="subheading active_animation"
+                  >The Perfect Choice for Family</span
+                >
+                <h1 class="heading active_animation">
+                  Begin Your Next <br />
+                  Adventure Today !
+                </h1>
+                <p class="active_animation">
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the <br />
+                  majority have suffered alteration in some form
+                </p>
+                <a href="#" class="yellow_btn active_animation"
+                  ><span>Explore More <i class="ph ph-arrow-right"></i></span
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!-- End swiper-slide -->
         </div>
 
-        <!-- Offcanvas menu for mobile navigation -->
-        <div class="fix-area">
-            <div class="offcanvas__info">
-                <div class="offcanvas__wrapper">
-                    <div class="offcanvas__content">
-                        <div class="offcanvas__top d-flex justify-content-between align-items-center">
-                            <div class="offcanvas__logo">
-                                <a href="index.html">
-                                    <img src="assets/img/logo.svg" alt="edutec" /> <!-- Logo in offcanvas -->
-                                </a>
-                            </div>
-                            <div class="offcanvas__close">
-                                <button type="button" aria-label="Close menu">
-                                    <i class="fas fa-times"></i> <!-- Close icon -->
-                                </button>
-                            </div>
-                        </div>
-                        <div class="mobile-menu fix mb-3"></div> <!-- Mobile menu placeholder -->
-                    </div>
-                </div>
-            </div>
+        <div class="hs_prev_arrow harrow"><i class="ph ph-caret-left"></i></div>
+        <div class="hs_next_arrow harrow">
+          <i class="ph ph-caret-right"></i>
         </div>
-        <div class="offcanvas__overlay"></div> <!-- Overlay for offcanvas menu -->
 
-        <!-- Header Top: contact info and social links -->
-        <header class="header_top">
-            <div class="container-xxl container-fluid">
-                <div class="row">
-                    <div class="col-md-6 col-12 mb-md-0 mb-sm-2 text-center text-md-start">
-                        <span class="align-self-center">
-                            <i class="ph ph-map-pin"></i> 68 Road Taxax, USA <!-- Address -->
-                        </span>
-                        <div class="hline align-self-center"></div> <!-- Horizontal line separator -->
-                        <span class="align-self-center tnumber">
-                            <a href="tel:+85654987">
-                                <i class="ph ph-phone"></i> (+85) - 654 987 <!-- Phone number -->
-                            </a>
-                        </span>
-                    </div>
-                    <div class="col-md-6 col-12 text-center text-md-end">
-                        <span class="align-self-center">
-                            <a href="#">
-                                <i class="ph ph-user-circle"></i> Sign in or Register <!-- Sign in/register link -->
-                            </a>
-                        </span>
-                        <div class="hline align-self-center"></div>
-                        <ul class="align-self-center">
-                            <!-- Social media icons -->
-                            <li>
-                                <a href="#" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" title="Twitter" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" title="YouTube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                            </li>
-                        </ul>
-                    </div>
+        <img
+          src="assets/img/icons/airplane-big.png"
+          class="bplane wow fadeInUp"
+          alt="plane"
+        />
+      </div>
+    </section>
+    <!-- End Slider -->
+    <!-- Start Searh filter -->
+    <div class="container y124">
+      <div class="row">
+        <div class="col-xl-11 col-12 mx-auto text-center">
+          <div class="tr_search_filter horizontal_style text-start">
+            <form
+              id="search_filter"
+              action="contact.php"
+              class="d-lg-flex d-block gap-4"
+              method="post"
+            >
+              <div class="tr_search_locatio sf_item d-flex gap-3">
+                <i class="ph ph-map-pin align-self-center"></i>
+                <div class="scontent align-self-center">
+                  <label>Destination</label>
+                  <select title="Choose your destination" aria-label="Destination">
+                    <option>Where to Go ?</option>
+                    <option>Dubai Oasis</option>
+                    <option>Barcelona Beach</option>
+                    <option>Caribbean Cove</option>
+                    <option>Dubai Oasis</option>
+                    <option>London Luxe</option>
+                    <option>Maldives Haven</option>
+                  </select>
                 </div>
-            </div>
-        </header>
+              </div>
 
-        <!-- Main Header: logo, navigation menu, call info, cart, search, booking button -->
-        <header id="tr_header">
-            <div class="container-xxl container-fluid">
-                <div class="row">
-                    <div class="col-xl-7 col-md-3 col-12 gap-3 d-lg-flex d-block text-md-start text-center align-self-center">
-                        <div class="site_logo d-inline-block">
-                            <a href="index.html">
-                                <img src="assets/img/logo.svg" alt="Tourin" /> <!-- Main logo -->
-                            </a>
-                        </div>
-                        <nav class="main-menu align-self-center">
-                            <ul>
-                                <!-- Navigation menu with dropdowns -->
-                                <li>
-                                    <a href="index.html">Home <i class="fa-solid fa-chevron-down"></i></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="index.html">Home 1</a></li>
-                                        <li><a href="index2.html">Home 2</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="destination.html">Destination</a></li>
-                                <li>
-                                    <a href="tour.html">Tour <i class="fa-solid fa-chevron-down"></i></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="tour-list.html">Tour with Sidebar</a></li>
-                                        <li><a href="tour-grid.html">Tour Grids</a></li>
-                                        <li><a href="tour-details.html">Tour Details</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Blog <i class="fa-solid fa-chevron-down"></i></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="blog-grids.html">Blog Grids</a></li>
-                                        <li><a href="blog.html">Blog Standard</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Pages <i class="fa-solid fa-chevron-down"></i></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="blog.html">Blog List</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
-                                        <li><a href="tour.html">Tour</a></li>
-                                        <li><a href="tour-details.html">Tour Details</a></li>
-                                        <li><a href="cart.html">Cart</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
-                                        <li><a href="404.html">404</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <!-- Right side: call info, cart, search, booking button, hamburger menu -->
-                    <div class="col-xl-5 col-md-9 col-12">
-                        <div class="header_right d-flex justify-content-lg-end justify-content-center">
-                            <div class="call_us d-flex gap-3 align-self-center">
-                                <i class="ph ph-headset align-self-center"></i> <!-- Headset icon -->
-                                <div class="call_content align-self-center">
-                                    <span>Call Anytime</span>
-                                    <a href="tel:+8801546857487">(86) - 1546 857</a> <!-- Call link -->
-                                </div>
-                            </div>
-                            <div class="cart_search d-flex align-self-center">
-                                <span class="hcart">
-                                    <a href="cart.html" title="View Cart" aria-label="View Cart">
-                                        <i class="ph ph-shopping-cart-simple"></i> <!-- Cart icon -->
-                                    </a>
-                                    <span>3</span> <!-- Cart item count -->
-                                </span>
-                                <span class="hsearch">
-                                    <a href="#" title="Search" aria-label="Search"><i class="ph ph-magnifying-glass"></i></a>
-                                </span>
-                            </div>
-                            <a href="#" class="yellow_btn d-none d-md-block align-self-center">
-                                <span>Booking Now</span> <!-- Booking button -->
-                            </a>
-                            <div class="header__hamburger d-xl-none my-auto">
-                                <div class="sidebar__toggle">
-                                    <i class="ph ph-list"></i> <!-- Hamburger menu icon -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              <div class="tr_search_ttype sf_item d-flex gap-3">
+                <i class="ph ph-person-simple-hike align-self-center"></i>
+                <div class="scontent align-self-center">
+                  <label>Trip Type</label>
+                  <select title="Choose trip type" aria-label="Trip Type">
+                    <option>Hiking</option>
+                    <option>Adventure</option>
+                    <option>Paraglading</option>
+                    <option>Swimming</option>
+                    <option>Water Sports</option>
+                    <option>Wildlife</option>
+                    <option>Relaxation</option>
+                    <option>Local Flavor</option>
+                  </select>
                 </div>
-            </div>
-        </header>
+              </div>
 
-        <!-- Slider section: main banner with slides -->
-        <section class="tr_slider_wrap text-center wow fadeInUp">
-            <div class="tr_slider">
-                <div class="swiper-wrapper">
-                    <!-- First slide -->
-                    <div class="swiper-slide">
-                        <div class="slider_item slider_item_bg1">
-                            <div class="container">
-                                <span class="subheading active_animation">Best Choice for Family</span>
-                                <h1 class="heading active_animation">
-                                    Dabbulu unaya ra? <br />
-                                    Mari enduk ra neeku !
-                                </h1>
-                                <p class="active_animation">
-                                    There are many variations of passages of Lorem Ipsum
-                                    available, but the <br />
-                                    majority have suffered alteration in some form
-                                </p>
-                                <a href="#" class="yellow_btn active_animation">
-                                    <span>Explore More <i class="ph ph-arrow-right"></i></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Second slide -->
-                    <div class="swiper-slide">
-                        <div class="slider_item slider_item_bg2">
-                            <span class="subheading active_animation">The Perfect Choice for Family</span>
-                            <h1 class="heading active_animation">
-                                Begin Your Next <br />
-                                Adventure Today !
-                            </h1>
-                            <p class="active_animation">
-                                There are many variations of passages of Lorem Ipsum
-                                available, but the <br />
-                                majority have suffered alteration in some form
-                            </p>
-                            <a href="#" class="yellow_btn active_animation">
-                                <span>Explore More <i class="ph ph-arrow-right"></i></span>
-                            </a>
-                        </div>
-                    </div>
+              <div class="tr_search_duration sf_item d-flex gap-3">
+                <i class="ph ph-clock align-self-center"></i>
+                <div class="scontent align-self-center">
+                  <label>Duration</label>
+                  <input
+                    type="text"
+                    class="form-control trsValue"
+                    placeholder="3 days 5 Nights"
+                  />
+                  <div class="trs_wrap">
+                    <div class="trsslider"></div>
+                  </div>
                 </div>
-                <!-- Slider navigation arrows -->
-                <div class="hs_prev_arrow harrow"><i class="ph ph-caret-left"></i></div>
-                <div class="hs_next_arrow harrow"><i class="ph ph-caret-right"></i></div>
-                <!-- Decorative airplane image -->
-                <img src="assets/img/icons/airplane-big.png" class="bplane wow fadeInUp" alt="plane" />
-            </div>
-        </section>
+              </div>
 
-        <!-- Search filter section: form for searching tours -->
-        <div class="container y124">
-            <div class="row">
-                <div class="col-xl-11 col-12 mx-auto text-center">
-                    <div class="tr_search_filter horizontal_style text-start">
-                        <form
-                            id="search_filter"
-                            action="contact.php"
-                            class="d-lg-flex d-block gap-4"
-                            method="post"
+              <div class="tr_search_price sf_item d-flex gap-3">
+                <i class="ph ph-credit-card align-self-center"></i>
+                <div class="scontent align-self-center">
+                  <label>Price</label>
+                  <input
+                    type="text"
+                    class="form-control trspvalue"
+                    placeholder="$200 - $3000"
+                  />
+                  <div class="trs_wrap">
+                    <div class="trsslider2"></div>
+                  </div>
+                </div>
+              </div>
+
+              <button type="submit" class="trs_btn">
+                <span>Search <i class="ph ph-magnifying-glass"></i></span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Searh filter -->
+    <!-- Start Tour Packages -->
+    <section class="tour_packages section-padding fadeInUp">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12 text-center wow fadeInUp">
+            <div class="section-heading">
+              <span>Popular Tour</span>
+              <h2>Amazing Tour Places</h2>
+            </div>
+          </div>
+          <!-- End Col -->
+
+          <div class="col-xl-12">
+            <div class="text-center">
+              <ul class="package_nav">
+                <li class="filter" data-filter="all">
+                  <i class="fa-solid fa-bell"></i> New
+                </li>
+                <li class="filter" data-filter=".featured">
+                  <i class="fa-solid fa-bolt"></i> Featured
+                </li>
+                <li class="filter" data-filter=".discount">
+                  <i class="fa-solid fa-percent"></i> Discount
+                </li>
+                <li class="filter" data-filter=".popular">
+                  <i class="fa-solid fa-arrow-trend-up"></i> Popular
+                </li>
+              </ul>
+            </div>
+
+            <div class="packages_wrap wow fadeInUp">
+              <div class="row g-4 tour_items">
+                <div class="col-xl-4 col-lg-6 col-12 mix new featured">
+                  <div class="package_item">
+                    <div class="pack_image">
+                      <img src="assets/img/tour/1.jpg" alt="img" />
+                      <div class="pac_badge">Featured</div>
+                    </div>
+
+                    <div class="pack_content">
+                      <span class="pack_rating"
+                        ><i class="fa-solid fa-star"></i> 4.8
+                        <span>(120 Reviews)</span></span
+                      >
+                      <h3>
+                        <a href="tour-details.html"
+                          >Acropolis, Parthenon, Plaka District 3 Day Athens
+                          Tour</a
                         >
-                            <!-- Destination select -->
-                            <div class="tr_search_locatio sf_item d-flex gap-3">
-                                <i class="ph ph-map-pin align-self-center"></i>
-                                <div class="scontent align-self-center">
-                                    <label>Destination</label>
-                                    <!-- (Missing <select> tag here, should wrap options) -->
-                                    <option>Where to Go ?</option>
-                                    <option>Dubai Oasis</option>
-                                    <option>Barcelona Beach</option>
-                                    <option>Caribbean Cove</option>
-                                    <option>Dubai Oasis</option>
-                                    <option>London Luxe</option>
-                                    <option>Maldives Haven</option>
-                                    <!-- (Missing </select>) -->
-                                </div>
-                            </div>
-                            <!-- Trip Type select -->
-                            <div class="tr_search_ttype sf_item d-flex gap-3">
-                                <i class="ph ph-person-simple-hike align-self-center"></i>
-                                <div class="scontent align-self-center">
-                                    <label>Trip Type</label>
-                                    <!-- (Missing <select> tag here, should wrap options) -->
-                                    <option>Hiking</option>
-                                    <option>Adventure</option>
-                                    <option>Paraglading</option>
-                                    <option>Swimming</option>
-                                    <option>Water Sports</option>
-                                    <option>Wildlife</option>
-                                    <option>Relaxation</option>
-                                    <option>Local Flavor</option>
-                                    <!-- (Missing </select>) -->
-                                </div>
-                            </div>
-                            <!-- Duration slider -->
-                            <div class="tr_search_duration sf_item d-flex gap-3">
-                                <i class="ph ph-clock align-self-center"></i>
-                                <div class="scontent align-self-center">
-                                    <label>Duration</label>
-                                    <input
-                                        type="text"
-                                        class="form-control trsValue"
-                                        placeholder="3 days 5 Nights"
-                                    />
-                                    <div class="trs_wrap">
-                                        <div class="trsslider"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Price slider -->
-                            <div class="tr_search_price sf_item d-flex gap-3">
-                                <i class="ph ph-credit-card align-self-center"></i>
-                                <div class="scontent align-self-center">
-                                    <label>Price</label>
-                                    <input
-                                        type="text"
-                                        class="form-control trspvalue"
-                                        placeholder="$200 - $3000"
-                                    />
-                                    <div class="trs_wrap">
-                                        <div class="trsslider2"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Search button -->
-                            <button type="submit" class="trs_btn">
-                                <span>Search <i class="ph ph-magnifying-glass"></i></span>
-                            </button>
-                        </form>
+                      </h3>
+
+                      <div class="pac_meta d-flex gap-2">
+                        <span class="pmeta_item"
+                          ><i class="fa-regular fa-map"></i> Abu Dhabi,
+                          Dubai</span
+                        >
+                        <span class="pmeta_item"
+                          ><i class="fa-regular fa-clock"></i> 3 Days - 4
+                          Nights</span
+                        >
+                      </div>
+
+                      <div class="discount_badge">25% Off</div>
+
+                      <div class="pack_btm d-flex">
+                        <span class="pack_price align-self-end"
+                          ><b>$245</b> <del>$300</del> /
+                          <small>Person</small></span
+                        >
+                        <a
+                          href="tour-details.html"
+                          class="yellow_btn align-self-end ms-auto"
+                          ><span>Book Now</span></a
+                        >
+                      </div>
                     </div>
+                  </div>
                 </div>
+                <!-- End Col -->
+
+                <div class="col-xl-4 col-lg-6 col-12 mix new discount">
+                  <div class="package_item">
+                    <div class="pack_image">
+                      <img src="assets/img/tour/2.jpg" alt="img" />
+                      <div class="pac_badge">Discount</div>
+                    </div>
+
+                    <div class="pack_content">
+                      <span class="pack_rating"
+                        ><i class="fa-solid fa-star"></i> 4.8
+                        <span>(120 Reviews)</span></span
+                      >
+                      <h3>
+                        <a href="tour-details.html"
+                          >Eiffel Tower, Louvre Museum, Montmartre 5 Day Paris
+                          Tour</a
+                        >
+                      </h3>
+
+                      <div class="pac_meta d-flex gap-2">
+                        <span class="pmeta_item"
+                          ><i class="fa-regular fa-map"></i> Abu Dhabi,
+                          Dubai</span
+                        >
+                        <span class="pmeta_item"
+                          ><i class="fa-regular fa-clock"></i> 3 Days - 5
+                          Nights</span
+                        >
+                      </div>
+
+                      <div class="discount_badge">25% Off</div>
+
+                      <div class="pack_btm d-flex">
+                        <span class="pack_price align-self-end"
+                          ><b>$245</b> <del>$300</del> /
+                          <small>Person</small></span
+                        >
+                        <a
+                          href="tour-details.html"
+                          class="yellow_btn align-self-end ms-auto"
+                          ><span>Book Now</span></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Col -->
+
+                <div class="col-xl-4 col-lg-6 col-12 mix new featured">
+                  <div class="package_item">
+                    <div class="pack_image">
+                      <img src="assets/img/tour/3.jpg" alt="img" />
+                      <div class="pac_badge">Featured</div>
+                    </div>
+
+                    <div class="pack_content">
+                      <span class="pack_rating"
+                        ><i class="fa-solid fa-star"></i> 4.8
+                        <span>(120 Reviews)</span></span
+                      >
+                      <h3>
+                        <a href="tour-details.html"
+                          >Big Ben, Buckingham Palace, British Museum London
+                          Tour</a
+                        >
+                      </h3>
+
+                      <div class="pac_meta d-flex gap-2">
+                        <span class="pmeta_item"
+                          ><i class="fa-regular fa-map"></i> Abu Dhabi,
+                          Dubai</span
+                        >
+                        <span class="pmeta_item"
+                          ><i class="fa-regular fa-clock"></i> 3 Days - 4
+                          Nights</span
+                        >
+                      </div>
+
+                      <div class="discount_badge">25% Off</div>
+
+                      <div class="pack_btm d-flex">
+                        <span class="pack_price align-self-end"
+                          ><b>$245</b> <del>$300</del> /
+                          <small>Person</small></span
+                        >
+                        <a
+                          href="tour-details.html"
+                          class="yellow_btn align-self-end ms-auto"
+                          ><span>Book Now</span></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Col -->
+
+                <div class="col-xl-4 col-lg-6 col-12 mix new popular">
+                  <div class="package_item">
+                    <div class="pack_image">
+                      <img src="assets/img/tour/4.jpg" alt="img" />
+                      <div class="pac_badge">popular</div>
+                    </div>
+
+                    <div class="pack_content">
+                      <span class="pack_rating"
+                        ><i class="fa-solid fa-star"></i> 4.8
+                        <span>(120 Reviews)</span></span
+                      >
+                      <h3>
+                        <a href="tour-details.html"
+                          >Brandenburg Gate, Berlin Wall, Museum Island Berlin
+                          Tour</a
+                        >
+                      </h3>
+
+                      <div class="pac_meta d-flex gap-2">
+                        <span class="pmeta_item"
+                          ><i class="fa-regular fa-map"></i> Abu Dhabi,
+                          Dubai</span
+                        >
+                        <span class="pmeta_item"
+                          ><i class="fa-regular fa-clock"></i> 3 Days - 4
+                          Nights</span
+                        >
+                      </div>
+
+                      <div class="discount_badge">25% Off</div>
+
+                      <div class="pack_btm d-flex">
+                        <span class="pack_price align-self-end"
+                          ><b>$245</b> <del>$300</del> /
+                          <small>Person</small></span
+                        >
+                        <a
+                          href="tour-details.html"
+                          class="yellow_btn align-self-end ms-auto"
+                          ><span>Book Now</span></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Col -->
+
+                <div class="col-xl-4 col-lg-6 col-12 mix new popular">
+                  <div class="package_item">
+                    <div class="pack_image">
+                      <img src="assets/img/tour/5.jpg" alt="img" />
+                      <div class="pac_badge">popular</div>
+                    </div>
+
+                    <div class="pack_content">
+                      <span class="pack_rating"
+                        ><i class="fa-solid fa-star"></i> 4.8
+                        <span>(120 Reviews)</span></span
+                      >
+                      <h3>
+                        <a href="tour-details.html"
+                          >Blue Mosque, Hagia Sophia, Grand Bazaar Istanbul
+                          Tour</a
+                        >
+                      </h3>
+
+                      <div class="pac_meta d-flex gap-2">
+                        <span class="pmeta_item"
+                          ><i class="fa-regular fa-map"></i> Abu Dhabi,
+                          Dubai</span
+                        >
+                        <span class="pmeta_item"
+                          ><i class="fa-regular fa-clock"></i> 3 Days - 4
+                          Nights</span
+                        >
+                      </div>
+
+                      <div class="discount_badge">25% Off</div>
+
+                      <div class="pack_btm d-flex">
+                        <span class="pack_price align-self-end"
+                          ><b>$245</b> <del>$300</del> /
+                          <small>Person</small></span
+                        >
+                        <a
+                          href="tour-details.html"
+                          class="yellow_btn align-self-end ms-auto"
+                          ><span>Book Now</span></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Col -->
+
+                <div class="col-xl-4 col-lg-6 col-12 mix new discount">
+                  <div class="package_item">
+                    <div class="pack_image">
+                      <img src="assets/img/tour/6.jpg" alt="img" />
+                      <div class="pac_badge">Discount</div>
+                    </div>
+
+                    <div class="pack_content">
+                      <span class="pack_rating"
+                        ><i class="fa-solid fa-star"></i> 4.8
+                        <span>(120 Reviews)</span></span
+                      >
+                      <h3>
+                        <a href="tour-details.html"
+                          >Burj Khalifa, Dubai Mall, Desert Safari Dubai Tour</a
+                        >
+                      </h3>
+
+                      <div class="pac_meta d-flex gap-2">
+                        <span class="pmeta_item"
+                          ><i class="fa-regular fa-map"></i> Abu Dhabi,
+                          Dubai</span
+                        >
+                        <span class="pmeta_item"
+                          ><i class="fa-regular fa-clock"></i> 3 Days - 4
+                          Nights</span
+                        >
+                      </div>
+
+                      <div class="discount_badge">25% Off</div>
+
+                      <div class="pack_btm d-flex">
+                        <span class="pack_price align-self-end"
+                          ><b>$245</b> <del>$300</del> /
+                          <small>Person</small></span
+                        >
+                        <a
+                          href="tour-details.html"
+                          class="yellow_btn align-self-end ms-auto"
+                          ><span>Book Now</span></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Col -->
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Tour Packages -->
+
+    <!-- Start Newsletter -->
+    <section class="container newsl_nmargin">
+      <div
+        class="newsletter_area text-center section-padding newsletter-bg"
+      >
+        <div class="col-lg-6 col-md-11 col-sm-12 mx-auto position-relative z-1">
+          <div class="newsletter_content px-2">
+            <h2>Sign Up Your Newsletter</h2>
+            <form id="newsletter_form" action="#" method="POST">
+              <input type="email" placeholder="Enter Email Address" />
+              <button type="submit" class="nebtn">
+                <span>Subscribe <i class="ph ph-paper-plane-tilt"></i></span>
+              </button>
+            </form>
+            <p>You agree to Tourin Terms and Conditions, Privacy Policy</p>
+          </div>
+        </div>
+        <img
+          src="assets/img/icons/airplane.png"
+          alt="img"
+          class="news_plane z-1"
+        />
+        <img src="assets/img/nesletter.png" alt="img" class="news_image z-1" />
+        <img
+          src="assets/img/shapes/newsletter.svg"
+          alt="img"
+          class="news_shape"
+        />
+      </div>
+    </section>
+    <!-- End Newsletter -->
+    <!-- Start Footer -->
+    <footer class="tr_footer wow fadeIn">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-12">
+            <div class="footer_about mb-md-0 mb-5">
+              <img src="assets/img/logo-white.svg" alt="img" />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                venenatis imperdiet titor sodales vulputate
+              </p>
+              <span>Connect with us</span>
+              <ul class="social_link">
+                <li>
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href="#" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </li>
+            </div>
+          </div>
+          <!-- End Col -->
+
+          <div class="col-xl-9 col-md-8 col-sm-6">
+            <div class="row">
+              <div class="col-xl-2 col-lg-4 col-md-6 col-12">
+                <div class="footer_widget">
+                  <h3 class="footer-title">About Tourin</h3>
+                  <ul>
+                    <li><a href="#">Faq's </a></li>
+                    <li><a href="#">Privacy Policy </a></li>
+                    <li><a href="#">Term & Conditions </a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- End Col -->
+
+              <div class="col-xl-2 col-lg-4 col-md-6 col-12">
+                <div class="footer_widget">
+                  <h3 class="footer-title">Useful Links</h3>
+                  <ul>
+                    <li><a href="#">Faq's </a></li>
+                    <li><a href="#">Privacy Policy </a></li>
+                    <li><a href="#">Term & Conditions </a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- End Col -->
+
+              <div class="col-xl-4 col-lg-4 col-md-6 col-12">
+                <div class="footer_widget">
+                  <h3 class="footer-title">Tour Gallery</h3>
+                  <div class="footer_gallery">
+                    <a href="#"
+                      ><img src="assets/img/footer/gallery/1.jpg" alt="img"
+                    /></a>
+                    <a href="#"
+                      ><img src="assets/img/footer/gallery/2.jpg" alt="img"
+                    /></a>
+                    <a href="#"
+                      ><img src="assets/img/footer/gallery/3.jpg" alt="img"
+                    /></a>
+                    <a href="#"
+                      ><img src="assets/img/footer/gallery/4.jpg" alt="img"
+                    /></a>
+                    <a href="#"
+                      ><img src="assets/img/footer/gallery/5.jpg" alt="img"
+                    /></a>
+                    <a href="#"
+                      ><img src="assets/img/footer/gallery/6.jpg" alt="img"
+                    /></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Col -->
+
+              <div class="col-xl-4 col-lg-4 col-md-6 col-12">
+                <div class="footer_widget">
+                  <h3 class="footer-title">Quick Contact</h3>
+                  <div class="footer_contact">
+                    <p>
+                      <i class="ph ph-map-pin-area"></i>
+                      <span>3600 Las Vegas Blvd S, Las <br />Vegas, NV</span>
+                    </p>
+
+                    <p>
+                      <i class="ph ph-phone-call"></i>
+                      <span><a href="tel:+9856554544">+9856 55 45 44</a></span>
+                    </p>
+
+                    <p>
+                      <i class="ph ph-envelope-simple"></i>
+                      <span
+                        ><a href="mailto:support@example.com"
+                          >support@example.com</a
+                        ></span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- End Col -->
+            </div>
+          </div>
+          <!-- End Col -->
         </div>
 
-        <!-- JavaScript files for interactivity and plugins -->
-        <script src="assets/js/jquery.min.js"></script> <!-- jQuery library -->
-        <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap JS -->
-        <script src="assets/js/datepicker.min.js"></script> <!-- Datepicker plugin -->
-        <script src="assets/js/jquery-ui.min.js"></script> <!-- jQuery UI for sliders -->
-        <script src="assets/js/swiper-bundle.min.js"></script> <!-- Swiper slider JS -->
-        <script src="assets/js/owl.carousel.min.js"></script> <!-- Owl Carousel JS -->
-        <script src="assets/js/jquery.meanmenu.min.js"></script> <!-- MeanMenu JS -->
-        <script src="assets/js/jquery.inview.min.js"></script> <!-- Inview plugin -->
-        <script src="assets/js/mixitup.min.js"></script> <!-- MixItUp for filtering -->
-        <script src="assets/js/nicesellect.js"></script> <!-- NiceSelect plugin -->
-        <script src="assets/js/wow.js"></script> <!-- WOW.js for animations -->
-        <script src="assets/js/YouTubePopUp.jquery.js"></script> <!-- YouTube popup plugin -->
-        <script src="assets/js/yvpopup-active.js"></script> <!-- YouTube popup activation -->
-        <script src="assets/js/scroll-up.js"></script> <!-- Scroll up button JS -->
-        <script src="assets/js/scripts.js"></script> <!-- Custom scripts -->
-        <script src="assets/js/search.js"></script> <!-- Search filter JS -->
-        <script src="assets/js/newsletter.js"></script> <!-- Newsletter JS -->
-        <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1"></script> <!-- Phosphor icons -->
-        <script>
-            // Initialize MixItUp for filtering products (if used)
-            var mixproduct = mixitup(".tour_items");
+        <div class="row">
+          <div class="col-12">
+            <div class="tr_copyright text-center">
+              <p>Copyright © 2025 <a href="#">Tourin</a> All Right Reserved.</p>
+            </div>
+          </div>
+          <!-- End Col -->
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
 
-            // jQuery ready function
-            jQuery(function () {
-                // Duration slider
-                jQuery(".trsslider").slider({
-                    value: 3, // Start value
-                    min: 1, // Minimum days/nights
-                    max: 20, // Maximum days/nights
-                    step: 1,
-                    slide: function (event, ui) {
-                        updateInput(ui.value);
-                    },
-                });
+    <!-- Start progress-wrap -->
+    <div class="progress-wrap">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
+    <!-- End progress-wrap -->
+    <!-- JS Script -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/datepicker.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <script src="assets/js/jquery.inview.min.js"></script>
+    <script src="assets/js/mixitup.min.js"></script>
+    <script src="assets/js/nicesellect.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/YouTubePopUp.jquery.js"></script>
+    <script src="assets/js/yvpopup-active.js"></script>
+    <script src="assets/js/scroll-up.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/newsletter.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1"></script>
+    <script>
+      // START Recomanded
+      var mixproduct = mixitup(".tour_items");
+      // END Recomanded
+      jQuery(function () {
+        // Duration
+        jQuery(".trsslider").slider({
+          value: 3, // Start value
+          min: 1, // Minimum days/nights
+          max: 20, // Maximum days/nights
+          step: 1,
+          slide: function (event, ui) {
+            updateInput(ui.value);
+          },
+        });
 
-                function updateInput(value) {
-                    jQuery(".trsValue").val(value + " Days " + value + " Nights");
-                }
+        function updateInput(value) {
+          jQuery(".trsValue").val(value + " Days " + value + " Nights");
+        }
 
-                // Price slider
-                jQuery(".trsslider2").slider({
-                    value: 200, // Start value
-                    min: 1, // Minimum price
-                    max: 3000, // Maximum price
-                    step: 50,
-                    slide: function (event, ui) {
-                        updateInput2(ui.value);
-                    },
-                });
+        // Duration
+        jQuery(".trsslider2").slider({
+          value: 200, // Start value
+          min: 1, // Minimum days/nights
+          max: 3000, // Maximum days/nights
+          step: 50,
+          slide: function (event, ui) {
+            updateInput2(ui.value);
+          },
+        });
 
-                function updateInput2(value) {
-                    jQuery(".trspvalue").val("$" + value);
-                }
+        function updateInput2(value) {
+          jQuery(".trspvalue").val("$" + value);
+        }
 
-                // Toggle duration slider on input click
-                jQuery(".trsValue").on("click", function () {
-                    jQuery(".trsslider").toggle();
-                });
+        jQuery(".trsValue").on("click", function () {
+          jQuery(".trsslider").toggle();
+        });
 
-                // Toggle price slider on input click
-                jQuery(".trspvalue").on("click", function () {
-                    jQuery(".trsslider2").toggle();
-                });
-            });
-        </script>
-    </body>
+        jQuery(".trspvalue").on("click", function () {
+          jQuery(".trsslider2").toggle();
+        });
+      });
+    </script>
+  </body>
 </html>
